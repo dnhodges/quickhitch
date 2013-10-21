@@ -40,6 +40,10 @@ gem 'rails_12factor', group: :production
 gem 'haml'
 ruby '2.0.0'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'twitter'
+gem 'twitter-text'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
