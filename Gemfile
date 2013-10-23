@@ -44,6 +44,10 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'twitter'
 gem 'twitter-text'
+
+gem 'geocoder'
+gem 'haml-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
