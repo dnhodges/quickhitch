@@ -28,7 +28,7 @@
 
 en:
   app:
-    author: "Deonna Hodges"
+    author: "QuickHitch"
     description: "A Ruby on Rails application that matches riders with rides using Twitter."
     description_html: "A %{ruby_on_rails} application that matches riders with rides using Twitter. Create a hashtag with your start and end locations and your pickup time to find a ride today!"
     name: "Sign in with Twitter"
