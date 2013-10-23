@@ -3,7 +3,6 @@
 %table
   %tr
     %th Address
-    %th Postal code
     %th Latitude
     %th Longitude
     %th
@@ -13,7 +12,6 @@
   - @locations.each do |location|
     %tr
       %td= location.address
-      %td= location.postal_code
       %td= location.latitude
       %td= location.longitude
       %td= link_to 'Show', location

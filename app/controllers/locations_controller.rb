@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
-
+  after_action :convert_address, only: [:create]
   # GET /locations
   # GET /locations.json
   def index
@@ -61,14 +61,28 @@ class LocationsController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
       @location = Location.find(params[:id])
     end
 
+    def convert_address
+      #location_params[:address] = Location.get_address(location_params[:address])
+      # 100.times do
+      #   puts "new addy: #{location_params[:address]}"
+      # end
+      @location.address = Location.get_address(@location.address)
+      @location.save
+      100.times do
+        puts "new addy: #{@location.address}"
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:address, :postal_code, :latitude, :longitude)
+      params.require(:location).permit(:address, :latitude, :longitude)
     end
 end
